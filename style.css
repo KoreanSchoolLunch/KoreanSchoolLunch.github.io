@@ -43,6 +43,8 @@ html, body {
     color: white;
        text-shadow: 3px 3px 6px black, -3px -3px 6px black, 3px -3px 6px black, -3px 3px 6px black; 
     padding: 8px;
+      font-family: "Sour Gummy", serif;
+    font-size: 3vh;
 }
 
 
