@@ -5,7 +5,7 @@
 }
 
 html, body {
-    background-color: #1C3656
+    background-color: #1C3656;
     height: 100%;
     scroll-snap-type: y mandatory;
     overflow-x: hidden;
