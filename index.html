@@ -16,28 +16,37 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-<button id="openModal" onclick="modal.showModal()">About</button>
-
-<dialog id="modal">
-      <button id="closeModal" onclick="modal.close()">X</button>
+<div id="buttons">
+<button id="openFAQ" class="bhover" onclick="faq.showModal()">FAQ</button>
+<button id="openCrack" onclick="crack.showModal()">Crack</button>
+<button id="goPrev" class="fade-out" onclick="scrollToPrevContainer()">Prev</button>
+<button id="goNext" onclick="scrollToNextContainer()">Next</button>
+  </div>
+<dialog id="faq">
+      <button id="closeFAQ" onclick="faq.close()">X</button>
   <br>
-  <p>Korean School Lunches posted by u/darkrealm190 on r/KoreanFood</p>
-  <p class="faq">Their FAQ:</p>
-<p class="faq">Yes it's a school lunch</p>
-<p class="faq">I'm a teacher but the students eat pretty much the same thing.</p>
-<p class="faq">No I didn't make it</p>
-<p class="faq">No there are not vegan options (afaik)</p>
-<p class="faq">No there are not allergy options (afaik)</p>
-<p class="faq">The yakult is only served some days</p>
-<p class="faq">It's a high school</p>
-<p class="faq">It's a private school</p>
-<p class="faq">Students pay nothing! (Teachers pay $3-4)</p>
-<p class="faq">Even though it's a private school, students do not pay tuition or anything like that</p>
-<p class="faq">Banchan is the Korean word for side dish</p>
-<p class="faq">Most of the lunches are around 800-900 calories</p>
-<p class="faq">I'm not sure where you can buy the tray from in your country. I recommend online.</p>
+  <p class="font">u/darkrealm190 posted 200 Korean school lunch trays on r/KoreanFood and eventually wrote this FAQ:</p>
+<ul class="font">
+  <li>Yes, it's a school lunch.</li>
+  <li>I'm a teacher, but the students eat pretty much the same thing.</li>
+  <li>No, I didn't make it.</li>
+  <li>No, there are not vegan options (afaik).</li>
+  <li>No, there are not allergy options (afaik).</li>
+  <li>The Yakult is only served on some days.</li>
+  <li>It's a high school.</li>
+  <li>It's a private school.</li>
+  <li>Students pay nothing! (Teachers pay $3-4).</li>
+  <li>Even though it's a private school, students do not pay tuition or anything like that.</li>
+  <li>Banchan is the Korean word for side dish.</li>
+  <li>Most of the lunches are around 800-900 calories.</li>
+  <li>I'm not sure where you can buy the tray from in your country. I recommend online.</li>
+</ul>
 </dialog>
 
+  <dialog id="crack">
+      <button id="closecrack" onclick="crack.close()">X</button>
+    <p class="font">You may see "CRACK" in some meal descriptions. u/darkrealm190 posted 200 Korean school lunches on r/koreanfood, some with seaweed flake seasoning (highly addictive, hence "CRACK"). Korean seaweed flake seasoning is 김가루 or kim garu, so they got the reddit flair "Kim Garu Cult". Kim means seaweed and garu means powder, so kim garu literally means seaweed crushed into powder (similarly, bap means rice, so kim-bap, which is like sushi rolls, literally means seaweed-rice). You can season rice or other dishes with kim garu, like you'd use Japanese furikake. Maangchi has <a href=https://www.maangchi.com/recipe/gimgaru-jumeokbap>a recipe that makes kim garu from seaweed paper, salt, and toasted sesame</a>, but you can also buy kim garu online (what brand do you like?). 김가루 is easy and convenient, as well as deliciously addictive!</p>
+  </dialog>
 
     <div class="container">
         <img class="lunch" src="https://i.redd.it/8p59p8rf3e151.jpg" alt="Lunch Image">
