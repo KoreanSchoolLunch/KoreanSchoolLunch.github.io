@@ -62,6 +62,23 @@ body{
 }
 
 
+#recipe {
+    color: lightblue;
+}
+
+#recipe:visited {
+    color: lightblue;
+}
+
+#recipe:hover {
+    color: rebeccapurple;
+}
+
+#recipe:active {
+    color: rebeccapurple;
+}
+
+
 html::-webkit-scrollbar {
     display: none; /* Hides scrollbar in Chrome, Edge, and Safari */
 }
