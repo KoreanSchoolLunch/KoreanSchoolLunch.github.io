@@ -4,13 +4,17 @@
     box-sizing: border-box;
 }
 
-html, body {
+html {
     background-color: #1C3656;
     height: 100%;
     scroll-snap-type: y mandatory;
     overflow-x: hidden;
     overflow-y: scroll;
     scrollbar-width: none;
+}
+
+body{
+  min-height: 100vh;
 }
 
 .lunch {
@@ -32,19 +36,29 @@ html, body {
 }
 
 .container img {
-    object-fit: contain;
+  object-fit: contain;
 }
+
+@media (max-aspect-ratio: 10/6) and (min-aspect-ratio: 7/6) {
+  .container img {
+      object-fit: cover;
+  }
+}
+
 
 .text {
     position: absolute;
     bottom: 0;
     left: 0;
-    margin: 16px;
+    margin: 12px;
     color: white;
        text-shadow: 3px 3px 6px black, -3px -3px 6px black, 3px -3px 6px black, -3px 3px 6px black; 
-    padding: 8px;
       font-family: "Sour Gummy", serif;
     font-size: 3vh;
+}
+
+.font{
+        font-family: "Sour Gummy", serif;
 }
 
 
@@ -53,23 +67,47 @@ html::-webkit-scrollbar {
 }
 
 
-        #openModal {
+        #buttons {
             z-index: 9;
-            position: absolute;
-            right: 10px;
-            top: 10px;
-          background: none;
+            position: fixed;
+            right: 5px;
+            top: 0px;
+        }
+
+#buttons button{
+            background: none;
           border: none;
     color: white;
        text-shadow: 3px 3px 6px black, -3px -3px 6px black, 3px -3px 6px black, -3px 3px 6px black; 
-    padding: 8px;
+    padding: 3px;
           cursor: pointer;
 
       font-family: "Sour Gummy", serif;
     font-size: 5vh;
-        }
+}
+#openFAQ:hover {
+   text-shadow: 3px 3px 6px #606060, -3px -3px 6px #606060, 3px -3px 6px #606060, -3px 3px 6px #606060;
+}
+#openCrack:hover {
+    text-shadow: 3px 3px 6px red, -3px -3px 6px red, 3px -3px 6px red, -3px 3px 6px red;
+}
+#goPrev:hover {
+   text-shadow: 3px 3px 6px #606060, -3px -3px 6px #606060, 3px -3px 6px #606060, -3px 3px 6px #606060;
+}
+#goNext:hover {
+   text-shadow: 3px 3px 6px #606060, -3px -3px 6px #606060, 3px -3px 6px #606060, -3px 3px 6px #606060;
+}
 
-button#closeModal {
+#goPrev, #goNext{
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+#closeFAQ, #closecrack {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -80,8 +118,6 @@ button#closeModal {
       color: #D0D0D0;
 }
 
-.faq{margin-bottom: 0.6em;}
-
 dialog {
     border: none;
     border-radius: 8px;
@@ -89,7 +125,7 @@ dialog {
     width: 75vw;
     height: 75vh;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
