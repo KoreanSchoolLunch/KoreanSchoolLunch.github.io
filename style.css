@@ -64,6 +64,9 @@ html::-webkit-scrollbar {
        text-shadow: 3px 3px 6px black, -3px -3px 6px black, 3px -3px 6px black, -3px 3px 6px black; 
     padding: 8px;
           cursor: pointer;
+
+      font-family: "Sour Gummy", serif;
+    font-size: 5vh;
         }
 
 button#closeModal {
